@@ -1,0 +1,52 @@
+<template name="navigation">
+  <div id="topnav" class="navbar navbar-fixed-top">
+    <div class="container">
+        {{> nav_collapsed}}
+       <a href="/">UltrasoundLearn</a> 
+        {{> nav_collapsable}}
+    </div><!-- /.container -->
+</div><!-- /.navbar -->
+</template>
+<template name="nav_collapsed">
+<!-- .navbar-toggle is used as the toggle for collapes navbar content -->
+  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+  </button>
+</template> 
+<template name="nav_collapsable">
+<!-- Place everything within .navbar-collapse to hide it until above 768pix -->
+      <div class="nav-collapse collapse navbar-responsive-collapse top-spy">
+          <ul class="nav navbar-nav pull-right">
+            <li id="login-button-dropdown" class="dropdown">
+              {{loginButtons}}
+            </li>
+            <li id="dashboard-dropdown-list" class="dropdown">
+              {{> dashboard}}
+            </li>
+          </ul>
+          {{> navigation2}}
+     </div> <!-- /.nav-collapse -->
+</template>
+<template name="navigation2"> 
+    <div class="bs-header">
+          <div class="row">
+            <center><img src="/logo.jpg"></center>
+          </div>
+          <div class="row">
+            <ul class="nav navbar-nav">
+              <li><a href="/">Home</a></li>
+              <li><a href="/l">Lectures</a></li>
+              <li><a href="/a">About</a></li>
+            </ul>
+          </div>
+    </div><!-- /.bs-header -->
+</template>
+<template name="dashboard">
+<button type="button" class="btn btn-custom btn-default dropdown-toggle"  data-toggle="dropdown">DASHBOARD <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Tests</a></li>
+        </ul><!-- /.dropdown-toggle -->
+</template>
