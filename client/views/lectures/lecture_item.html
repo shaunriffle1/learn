@@ -1,7 +1,7 @@
 <template name="lectureItem">
   <div class="lecture">
     <div class="lecture-content">
-      <h3><a href="{{url}}">{{title}}</a><span>  {{domain}}</span></h3>
+      <h3><a href="{{pathFor 'lecturePage'}}">{{title}}</a><span>  by {{professor}}</span> <span>  {{domain}}</span></h3>
     </div><!-- /.lecture-content -->
   </div><!-- /.lecture -->
 </template>

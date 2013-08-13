@@ -1,0 +1,9 @@
+<template name="lecturePage">
+<div class="lectures">
+  <h3> this is lecture page {{lecture_num}}</h3>
+     {{#each questions}}
+       {{> questionItem}}
+     {{/each}}
+</div>
+</template>
+

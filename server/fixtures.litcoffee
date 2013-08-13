@@ -21,6 +21,7 @@ Populate raw database with some dummy content
               title: "Lecture #{i} - #{m}"
               professor: "Prof #{i}"
               course_num: i
+              lecture_num: m
             Quizes.insert
               title: "Quiz #{i} - #{m}"
               lecture_num: m

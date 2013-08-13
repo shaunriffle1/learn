@@ -18,6 +18,9 @@ routing
 
          @route 'lecturePage',
            path: '/course/:course_num/lecture/:lecture_num'
+         
+         @route 'questionPage',
+           path: '/course/:course_num/lecture/:lecture_num/question/:question_num'
 
      Router.configure
        layout: 'layout'
