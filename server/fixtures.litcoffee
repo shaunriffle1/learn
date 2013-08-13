@@ -9,10 +9,12 @@ Populate raw database with some dummy content
         l = 5
         for i in [0..k]
           console.log "course count #{i}"
+
           Courses.insert
-            num: i
+            course_num: i
             title: "Course #{i}"
             professor: "Prof. #{i}"
+
           for m in [0..j]
             console.log "lecture count #{i}-#{m}"
             Lectures.insert
@@ -23,6 +25,7 @@ Populate raw database with some dummy content
               title: "Quiz #{i} - #{m}"
               lecture_num: m
               course_num: i
+
             for n in [0..l]
               console.log "question count #{i}-#{m}-#{n}"
               Questions.insert
@@ -30,6 +33,7 @@ Populate raw database with some dummy content
                 lecture_num: m
                 course_num: i
                 question_num: n
+
           Exams.insert
             title: "Exam #{i}"
             course_num: i
