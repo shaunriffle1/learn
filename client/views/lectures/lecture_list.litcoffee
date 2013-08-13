@@ -5,7 +5,6 @@ Lecture List Controller
       template: 'lectureList'
 
       data: ->
-        blahblah: 'blah!blah'
         lectures:  ->
           Lectures.find()
 

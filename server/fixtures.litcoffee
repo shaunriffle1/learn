@@ -1,10 +1,35 @@
 Populate raw database with some dummy content
 ====
-    if (Lectures.find().count() === 0)
-      console.logi "fixtures intiated."
-      k  = 50
-      for  (i = 0; i < k; i++)
-        Lectures.insert
-          title: 'Lecture #{i}'
-          professor: 'Dr. #{i}'
-          url: 'http://testing.com/testing#{i}'
+   
+      console.log "entering fixtures"
+      if Courses.find().count() is 0
+        console.log 'fixtures initiated'
+        k = 25
+        j = 18
+        l = 5
+        for i in [0..k]
+          console.log "course count #{i}"
+          Courses.insert
+            num: i
+            title: "Course #{i}"
+            professor: "Prof. #{i}"
+          for m in [0..j]
+            console.log "lecture count #{i}-#{m}"
+            Lectures.insert
+              title: "Lecture #{i} - #{m}"
+              professor: "Prof #{i}"
+              course_num: i
+            Quizes.insert
+              title: "Quiz #{i} - #{m}"
+              lecture_num: m
+              course_num: i
+            for n in [0..l]
+              console.log "question count #{i}-#{m}-#{n}"
+              Questions.insert
+                title: "Question #{i} - #{m} - #{n}"
+                lecture_num: m
+                course_num: i
+                question_num: n
+          Exams.insert
+            title: "Exam #{i}"
+            course_num: i

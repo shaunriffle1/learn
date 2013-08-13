@@ -4,10 +4,30 @@ routing
 ------
 
     Router.map ->
-      @route 'home', path: '/'
-      @route 'about', path: '/a'
-      @route 'lectureList', path: '/l'
+        @route 'home',
+          path: '/'
 
-    Router.configure layout: 'layout'
+        @route 'about',
+          path: '/about'
+
+        @route 'courseList',
+          path: '/courses'
+
+        @route 'coursePage',
+          path: '/course/:_id'
+
+        @route 'lecturePage',
+          path: '/lecture/:_id'
+
+    Router.configure
+      layout: 'layout'
+      notFoundTemplate: 'notFound'
+      loadingTemplate: 'loading'
+      renderTemplates:
+        'footer':
+            to: 'footer'
+        'sidebar':
+            to: 'sidebar'
+
 
 
