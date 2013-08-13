@@ -4,9 +4,9 @@ Populate raw database with some dummy content
       console.log "entering fixtures"
       if Courses.find().count() is 0
         console.log 'fixtures initiated'
-        k = 25
-        j = 18
-        l = 5
+        k = 7
+        j = 7
+        l = 7
         for i in [0..k]
           console.log "course count #{i}"
 
